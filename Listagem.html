@@ -1,0 +1,40 @@
+<!-- templates/listagem.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Cooperados</title>
+</head>
+<body>
+    <h1>Lista de Cooperados</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Endereço</th>
+            <th>Valor Cota</th>
+            <th>Pagamentos</th>
+            <th>Telefone 1</th>
+            <th>Telefone 2</th>
+            <th>Operador</th>
+        </tr>
+        {% for c in cadastros %}
+        <tr>
+            <td>{{ c[0] }}</td>
+            <td>{{ c[1] }}</td>
+            <td>{{ c[2] }}</td>
+            <td>{{ c[3] }}</td>
+            <td>{{ c[4] }}</td>
+            <td>{{ c[5] }}</td>
+            <td>{{ c[6] }}</td>
+            <td>{{ c[7] }}</td>
+            <td>{{ c[8] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Voltar ao Início</a>
+</body>
+</html>
